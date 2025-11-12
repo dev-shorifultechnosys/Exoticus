@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exoticus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-green-dark': '#4A6B4C',
+                        'brand-green-light': '#B8D434',
+                        'brand-off-white': '#F7F5F2',
+                        'brand-charcoal': '#2D2D2D',
+                    },
+                    fontFamily: {
+                        'serif': ['Cormorant Garamond', 'serif'],
+                        'sans': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>::-webkit-scrollbar { display: none;}</style>
+</head>
+<body class="bg-brand-off-white font-sans text-brand-charcoal overflow-x-hidden">
+    
+    <header id="header" class="bg-brand-off-white/80 backdrop-blur-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <img src="https://leanlivingjourney.com/wp-content/uploads/2025/11/Exoticus_Indica_Cap-Logo-1.png" width="40px;" height="40px;">
+                    <!-- <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M68.75 87.5C60.4167 87.5 53.0417 84.5417 46.625 78.625C47.2917 76.5 48.25 74.0417 49.5 71.25C52.5 65.5417 55.0833 60.5417 57.25 56.25C59.5 51.875 61.125 48.125 62.125 45C63.2083 41.875 63.75 39.0833 63.75 36.625C63.75 32.5417 62.7083 29.25 60.625 26.75C58.5417 24.25 55.75 23 52.25 23C47.9167 23 44.375 24.5 41.625 27.5C38.875 30.5 37.5 34.2083 37.5 38.625C37.5 41.25 37.8333 43.8333 38.5 46.375C39.1667 48.9167 39.8333 51.125 40.5 53C41.1667 54.875 41.6667 56.4167 42 57.625L28.25 54.375C27.5833 52.125 27.0833 49.7083 26.75 47.125C26.4167 44.5417 26.25 41.75 26.25 38.75C26.25 29.5 28.7917 22.0417 33.875 16.375C39.0417 10.625 46.125 7.75 55.125 7.75C64.6667 7.75 72.1667 10.7917 77.625 16.875C83.0833 22.9583 85.875 30.2917 85.875 38.875C85.875 43.75 84.7917 48.5833 82.625 53.375C80.5417 58.0833 77.75 62.8333 74.25 67.625C70.75 72.4167 67.7917 76.7083 65.375 80.5C64.3333 82.25 63.4583 83.875 62.75 85.375C64.5833 86.375 66.5833 86.9583 68.75 87.125V87.5Z" fill="#B8D434"/>
+                    </svg> -->
+                    <span class="font-serif text-4xl font-bold text-brand-green-dark">Exoticus</span>
+                </div>
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="#" class="text-brand-charcoal hover:text-brand-green-light transition-colors duration-300">Home</a>
+                    <a href="#" class="text-brand-charcoal hover:text-brand-green-light transition-colors duration-300">Our Facility</a>
+                    <a href="#" class="text-brand-charcoal hover:text-brand-green-light transition-colors duration-300">Our Strains</a>
+                    <a href="#" class="text-brand-charcoal hover:text-brand-green-light transition-colors duration-300">Our Story</a>
+                    <a href="#" class="text-brand-charcoal hover:text-brand-green-light transition-colors duration-300">Our Brand</a>
+                    <a href="#" class="text-brand-charcoal hover:text-brand-green-light transition-colors duration-300">Merchandise</a>
+                    <a href="#" class="text-brand-charcoal hover:text-brand-green-light transition-colors duration-300">Where To Buy</a>
+                    <a href="#" class="text-brand-charcoal hover:text-brand-green-light transition-colors duration-300">Contact</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <button class="text-brand-charcoal hover:text-brand-green-light transition-colors duration-300">
+                        <i class="fa-solid fa-magnifying-glass text-lg"></i>
+                    </button>
+                    <button class="hidden md:block bg-brand-green-dark text-white px-6 py-2 rounded-full font-sans font-semibold hover:bg-brand-charcoal transition-colors duration-300">
+                        Call Now
+                    </button>
+                    <button class="lg:hidden text-brand-charcoal">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero-section" class="relative h-[800px] flex items-center justify-center text-center text-white bg-brand-green-dark">
+            <div class="absolute inset-0 z-0">
+                <img class="w-full h-full object-cover opacity-30" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/25cdb7fa01-dafeb824c65d8d54b795.png" alt="macro photograph of a vibrant green cannabis plant bud covered in crystalline trichomes, dramatic lighting, nature photography, wellness aesthetic" />
+            </div>
+            <div class="relative z-10 p-8 max-w-3xl">
+                <h1 class="text-5xl md:text-7xl font-serif font-bold mb-4" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.5);">Purity in Process. Excellence in Nature.</h1>
+                <p class="text-lg md:text-xl font-sans mb-8 max-w-2xl mx-auto" style="text-shadow: 1px 1px 4px rgba(0,0,0,0.5);">Experience the art of cultivation. Exoticus is dedicated to producing the finest, most consistent cannabis through meticulous care and a passion for wellness.</p>
+                <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <button class="bg-brand-green-light text-brand-charcoal px-8 py-3 rounded-full font-sans font-bold text-lg hover:bg-white transition-all duration-300 transform hover:scale-105">Explore Our Strains</button>
+                    <button class="border-2 border-brand-off-white text-brand-off-white px-8 py-3 rounded-full font-sans font-bold text-lg hover:bg-brand-off-white hover:text-brand-charcoal transition-all duration-300 transform hover:scale-105">Tour Our Facility</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="intro-section" class="py-24 bg-brand-off-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div class="h-[500px] overflow-hidden rounded-lg shadow-xl">
+                        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/b79935711c-7e9a34c5b47592c1527c.png" alt="A modern, clean laboratory with scientific equipment and lush green plants in the background, bright natural light, wellness and science aesthetic" />
+                    </div>
+                    <div>
+                        <h2 class="font-serif text-4xl font-bold text-brand-green-dark mb-4">Rooted in Science, Grown with Heart.</h2>
+                        <p class="text-brand-charcoal text-lg mb-4 leading-relaxed">At Exoticus, we bridge the gap between artisanal cultivation and scientific precision. Our philosophy is simple: to cultivate premium cannabis that enhances well-being. We believe in transparency, quality, and the therapeutic power of nature, refined by expertise.</p>
+                        <p class="text-brand-charcoal text-lg mb-6 leading-relaxed">Every plant is a testament to our commitment, nurtured from seed to sale with an unwavering dedication to purity and potency.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="facility-section" class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h3 class="text-brand-green-light font-sans font-semibold tracking-widest uppercase">The Nursery of Nature</h3>
+                    <h2 class="text-5xl font-serif font-bold text-brand-green-dark mt-2 mb-4">State-of-the-Art Cultivation</h2>
+                    <p class="text-lg text-brand-charcoal leading-relaxed">Our facility is more than just a grow space; it's a controlled ecosystem designed for excellence. We harness cutting-edge technology to create the perfect environment, ensuring every plant thrives under optimal conditions of light, humidity, and nutrition.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="h-96 overflow-hidden rounded-lg shadow-lg">
+                        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/12bfe6e4aa-1a4084c388779f36c9c0.png" alt="Interior of a pristine, modern cannabis cultivation facility with rows of healthy plants under glowing LED lights, clean and sterile environment" />
+                    </div>
+                    <div class="h-96 overflow-hidden rounded-lg shadow-lg">
+                        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/299e2552d7-f7fcff68125f157713c6.png" alt="Close-up of a gloved hand gently inspecting a cannabis plant in a high-tech facility, focus on care and precision, scientific setting" />
+                    </div>
+                    <div class="h-96 overflow-hidden rounded-lg shadow-lg">
+                        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/8492ceb4c9-32b4c80f7f3950aca87b.png" alt="A technician in a lab coat monitoring data on a tablet inside a modern greenhouse, blending technology and nature" />
+                    </div>
+                </div>
+                <div class="text-center mt-16">
+                    <button class="bg-brand-green-dark text-white px-10 py-4 rounded-full font-sans font-bold text-lg hover:bg-brand-charcoal transition-colors duration-300 transform hover:scale-105">Schedule a Virtual Tour</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="process-section" class="py-24 bg-brand-green-dark text-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-5xl font-serif font-bold mb-4">The Exoticus Process</h2>
+                    <p class="text-lg text-brand-off-white/90 leading-relaxed">From seed to final product, our meticulous process ensures unparalleled quality. We are hands-on at every stage, combining time-honored techniques with innovative practices.</p>
+                </div>
+                <div class="grid md:grid-cols-4 gap-12 text-center">
+                    <div id="process-step-1" class="flex flex-col items-center">
+                        <div class="w-24 h-24 bg-brand-green-light rounded-full flex items-center justify-center mb-4 text-brand-charcoal text-4xl shadow-lg"><i class="fa-solid fa-seedling"></i></div>
+                        <h4 class="text-xl font-serif font-bold mb-2">1. Germination</h4>
+                        <p class="text-brand-off-white/80">Our journey begins with selecting elite genetics, ensuring a strong and healthy start for every plant.</p>
+                    </div>
+                    <div id="process-step-2" class="flex flex-col items-center">
+                        <div class="w-24 h-24 bg-brand-green-light rounded-full flex items-center justify-center mb-4 text-brand-charcoal text-4xl shadow-lg"><i class="fa-solid fa-fan"></i></div>
+                        <h4 class="text-xl font-serif font-bold mb-2">2. Cultivation</h4>
+                        <p class="text-brand-off-white/80">In our controlled environment, plants receive precise nutrients, pure water, and optimized light cycles.</p>
+                    </div>
+                    <div id="process-step-3" class="flex flex-col items-center">
+                        <div class="w-24 h-24 bg-brand-green-light rounded-full flex items-center justify-center mb-4 text-brand-charcoal text-4xl shadow-lg"><i class="fa-solid fa-scissors"></i></div>
+                        <h4 class="text-xl font-serif font-bold mb-2">3. Harvest & Trim</h4>
+                        <p class="text-brand-off-white/80">We harvest at peak potency and hand-trim with care to preserve the delicate trichomes and terpenes.</p>
+                    </div>
+                    <div id="process-step-4" class="flex flex-col items-center">
+                        <div class="w-24 h-24 bg-brand-green-light rounded-full flex items-center justify-center mb-4 text-brand-charcoal text-4xl shadow-lg"><i class="fa-solid fa-box-archive"></i></div>
+                        <h4 class="text-xl font-serif font-bold mb-2">4. Cure & Package</h4>
+                        <p class="text-brand-off-white/80">A slow, patient curing process develops the rich flavor profile before products are packaged for freshness.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="strains-section" class="py-24 bg-brand-off-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h3 class="text-brand-green-light font-sans font-semibold tracking-widest uppercase">Curated Genetics</h3>
+                        <h2 class="font-serif text-5xl font-bold text-brand-green-dark mb-4">Discover Our Strains</h2>
+                        <p class="text-brand-charcoal text-lg mb-6 leading-relaxed">Each Exoticus strain is a unique masterpiece, cultivated to express its distinct character, aroma, and effects. Whether you seek relaxation, creativity, or relief, our curated selection offers a sophisticated experience for the discerning consumer.</p>
+                        <button class="bg-brand-green-light text-brand-charcoal px-8 py-3 rounded-full font-sans font-bold text-lg hover:bg-brand-green-dark hover:text-white transition-all duration-300 transform hover:scale-105">Find Our Products</button>
+                    </div>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div id="strain-card-1" class="bg-white p-4 rounded-lg shadow-lg text-center">
+                            <div class="h-40 overflow-hidden rounded-md mb-4">
+                               <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/3c455b9d4e-3c5018de6ff7cd73f2e3.png" alt="Elegant glass jar containing high-quality cannabis flower, studio lighting, luxury product photography, minimalist background" />
+                            </div>
+                            <h4 class="font-serif font-bold text-xl text-brand-green-dark">Elysian Haze</h4>
+                            <p class="text-sm text-gray-500">Sativa | Uplifting</p>
+                        </div>
+                        <div id="strain-card-2" class="bg-white p-4 rounded-lg shadow-lg text-center">
+                             <div class="h-40 overflow-hidden rounded-md mb-4">
+                               <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/f2d89bd852-40624f3721736ba175c3.png" alt="Close-up of a dark purple and green cannabis bud in a premium container, sophisticated product shot" />
+                            </div>
+                            <h4 class="font-serif font-bold text-xl text-brand-green-dark">Midnight Bloom</h4>
+                            <p class="text-sm text-gray-500">Indica | Relaxing</p>
+                        </div>
+                        <div id="strain-card-3" class="bg-white p-4 rounded-lg shadow-lg text-center">
+                             <div class="h-40 overflow-hidden rounded-md mb-4">
+                               <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/96b2760259-ad8744d9e6f020a46953.png" alt="Beautifully trimmed cannabis flower with orange pistils displayed in an open luxury box, clean background" />
+                            </div>
+                            <h4 class="font-serif font-bold text-xl text-brand-green-dark">Solstice Dream</h4>
+                            <p class="text-sm text-gray-500">Hybrid | Balanced</p>
+                        </div>
+                        <div id="strain-card-4" class="bg-white p-4 rounded-lg shadow-lg text-center">
+                             <div class="h-40 overflow-hidden rounded-md mb-4">
+                               <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/b440facce7-3533029d1dd75658b8e8.png" alt="A single, perfectly formed cannabis bud on a clean, white surface, minimalist and artistic style" />
+                            </div>
+                            <h4 class="font-serif font-bold text-xl text-brand-green-dark">Veridian Gold</h4>
+                            <p class="text-sm text-gray-500">CBD | Wellness</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="story-section" class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div class="h-[500px] overflow-hidden rounded-lg shadow-xl">
+                        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/3126504f9d-92899c67a9b305881c92.png" alt="Portrait of a passionate, friendly founder in a modern greenhouse, smiling, natural light, authentic and trustworthy" />
+                    </div>
+                    <div>
+                        <h2 class="font-serif text-5xl font-bold text-brand-green-dark mb-4">A Passion for the Plant</h2>
+                        <p class="text-brand-charcoal text-lg mb-4 leading-relaxed">Exoticus was born from a deep respect for the cannabis plant and its potential to improve lives. Our founders, a team of horticulturists and wellness advocates, saw a need for a brand that prioritizes integrity and quality above all else.</p>
+                        <p class="text-brand-charcoal text-lg mb-6 leading-relaxed">We are not just growers; we are craftsmen dedicated to perfecting our art. Our story is one of perseverance, innovation, and an unshakeable belief in the power of nature.</p>
+                        <button class="border-2 border-brand-green-dark text-brand-green-dark px-8 py-3 rounded-full font-sans font-bold text-lg hover:bg-brand-green-dark hover:text-white transition-all duration-300 transform hover:scale-105">Discover Our Values</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="omma-compliance-section" class="py-16 bg-brand-green-dark text-white">
+            <div class="container mx-auto px-6 text-center">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+                    <div class="text-5xl text-brand-green-light">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div class="md:text-left">
+                        <h3 class="text-3xl font-serif font-bold">OMMA Compliant & Lab Tested</h3>
+                        <p class="text-brand-off-white/90 mt-2 max-w-2xl">Your safety and trust are paramount. Exoticus is fully compliant with all OMMA regulations. Every batch is rigorously third-party lab tested for purity, potency, and safety. We provide transparent access to our certificates of analysis for your peace of mind.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="merchandise-section" class="py-24 bg-brand-off-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-5xl font-serif font-bold text-brand-green-dark mb-4">The Exoticus Lifestyle</h2>
+                    <p class="text-lg text-brand-charcoal leading-relaxed">Extend the experience with our collection of premium, thoughtfully designed merchandise. Quality and style, inspired by nature.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div id="merch-item-1" class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <div class="h-64 overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://leanlivingjourney.com/wp-content/uploads/2025/11/Exoticus_Indica_Packaging-Bag_V2.jpg" alt="a stylish black t-shirt with a minimalist, elegant lime green" />
+                        </div>
+                        <div class="p-6 text-center">
+                            <h4 class="text-xl font-serif font-bold text-brand-green-dark">Indica Dominant Flower</h4>
+                            <p class="text-gray-500">$30.00</p>
+                        </div>
+                    </div>
+                    <div id="merch-item-2" class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <div class="h-64 overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://leanlivingjourney.com/wp-content/uploads/2025/11/Exoticus_Hybrid_Packaging-Bag.jpg" alt="a modern dark green baseball cap with an embroidered lime green leaf-like" />
+                        </div>
+                        <div class="p-6 text-center">
+                            <h4 class="text-xl font-serif font-bold text-brand-green-dark">Hybrid Flower</h4>
+                            <p class="text-gray-500">$25.00</p>
+                        </div>
+                    </div>
+                    <div id="merch-item-3" class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <div class="h-64 overflow-hidden">
+                           <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://leanlivingjourney.com/wp-content/uploads/2025/11/Exoticus_Sativa_Packaging-Bag.jpg" alt="a sleek, matte black reusable water bottle with the subtle Exoticus logo in lime green, lifestyle product shot" />
+                        </div>
+                        <div class="p-6 text-center">
+                            <h4 class="text-xl font-serif font-bold text-brand-green-dark">Sativa Dominant Flower</h4>
+                            <p class="text-gray-500">$35.00</p>
+                        </div>
+                    </div>
+                    <div id="merch-item-4" class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <div class="h-64 overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://leanlivingjourney.com/wp-content/uploads/2025/11/Exoticus_Hybrid_Bottle-Sticker.jpg" alt="a high-quality, elegant dark green tote bag with the Exoticus brand name in a clean, modern font, product photography" />
+                        </div>
+                        <div class="p-6 text-center">
+                            <h4 class="text-xl font-serif font-bold text-brand-green-dark">Hybrid Fower</h4>
+                            <p class="text-gray-500">$20.00</p>
+                        </div>
+                    </div>
+                    <div id="merch-item-4" class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <div class="h-64 overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://leanlivingjourney.com/wp-content/uploads/2025/11/Exoticus_Indica_Bottle-Sticker.jpg" alt="a high-quality, elegant dark green tote bag with the Exoticus brand name in a clean, modern font, product photography" />
+                        </div>
+                        <div class="p-6 text-center">
+                            <h4 class="text-xl font-serif font-bold text-brand-green-dark">Indica Dominant Flower</h4>
+                            <p class="text-gray-500">$20.00</p>
+                        </div>
+                    </div>
+                    <div id="merch-item-4" class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <div class="h-64 overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://leanlivingjourney.com/wp-content/uploads/2025/11/IMG_4312.jpeg" alt="a high-quality, elegant dark green tote bag with the Exoticus brand name in a clean, modern font, product photography" />
+                        </div>
+                        <div class="p-6 text-center">
+                            <h4 class="text-xl font-serif font-bold text-brand-green-dark">Sativa Dominant Flower</h4>
+                            <p class="text-gray-500">$20.00</p>
+                        </div>
+                    </div>
+                    <div id="merch-item-4" class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <div class="h-64 overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://leanlivingjourney.com/wp-content/uploads/2025/11/Exoticus_Indica_Packaging-Box-Mockup.jpg" alt="a high-quality, elegant dark green tote bag with the Exoticus brand name in a clean, modern font, product photography" />
+                        </div>
+                        <div class="p-6 text-center">
+                            <h4 class="text-xl font-serif font-bold text-brand-green-dark">Indica Dominant Flower</h4>
+                            <p class="text-gray-500">$20.00</p>
+                        </div>
+                    </div>
+                    <div id="merch-item-4" class="bg-white rounded-lg shadow-lg overflow-hidden group">
+                        <div class="h-64 overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://leanlivingjourney.com/wp-content/uploads/2025/11/IMG_4342.jpeg" alt="a high-quality, elegant dark green tote bag with the Exoticus brand name in a clean, modern font, product photography" />
+                        </div>
+                        <div class="p-6 text-center">
+                            <h4 class="text-xl font-serif font-bold text-brand-green-dark">Hybrid Flower</h4>
+                            <p class="text-gray-500">$20.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="partnership-cta-section" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <div class="max-w-3xl mx-auto">
+                    <h2 class="text-4xl font-serif font-bold text-brand-green-dark mb-4">Want to Carry Exoticus?</h2>
+                    <p class="text-lg text-brand-charcoal mb-8">Join our network of trusted retail partners and offer your customers the premium quality of Exoticus. We are committed to building strong, supportive relationships with dispensaries who share our values.</p>
+                    <button class="bg-brand-green-dark text-white px-10 py-4 rounded-full font-sans font-bold text-lg hover:bg-brand-charcoal transition-colors duration-300 transform hover:scale-105">Become a Partner</button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="testimonial-section" class="py-24 bg-brand-green-dark text-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-5xl font-serif font-bold">What Our Community Says</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div id="testimonial-1" class="bg-brand-off-white/10 p-8 rounded-lg">
+                        <div class="text-brand-green-light text-3xl mb-4">
+                           <i class="fa-solid fa-quote-left"></i>
+                        </div>
+                        <p class="text-brand-off-white/90 mb-6">The quality from Exoticus is unmatched. The consistency and flavor of their products show a real dedication to their craft. It's my go-to for wellness and relaxation.</p>
+                        <div class="flex items-center">
+                            <img src="https://leanlivingjourney.com/wp-content/uploads/2025/10/images-7.jpeg" alt="Avatar" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h5 class="font-bold font-sans">Jessica M.</h5>
+                                <p class="text-sm text-brand-off-white/70">Verified Customer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="testimonial-2" class="bg-brand-off-white/10 p-8 rounded-lg">
+                        <div class="text-brand-green-light text-3xl mb-4">
+                           <i class="fa-solid fa-quote-left"></i>
+                        </div>
+                        <p class="text-brand-off-white/90 mb-6">As a dispensary owner, partnering with Exoticus was a great decision. Their professionalism and incredible products make them a favorite among our customers.</p>
+                        <div class="flex items-center">
+                            <img src="https://leanlivingjourney.com/wp-content/uploads/2025/10/images-2.jpeg" alt="Avatar" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h5 class="font-bold font-sans">David Chen</h5>
+                                <p class="text-sm text-brand-off-white/70">Retail Partner</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="testimonial-3" class="bg-brand-off-white/10 p-8 rounded-lg">
+                        <div class="text-brand-green-light text-3xl mb-4">
+                           <i class="fa-solid fa-quote-left"></i>
+                        </div>
+                        <p class="text-brand-off-white/90 mb-6">I appreciate the transparency and the focus on wellness. It's refreshing to see a brand that cares so much about the end-user's experience and safety.</p>
+                        <div class="flex items-center">
+                            <img src="https://leanlivingjourney.com/wp-content/uploads/2025/10/images-4.jpeg" alt="Avatar" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h5 class="font-bold font-sans">Sarah Greene</h5>
+                                <p class="text-sm text-brand-off-white/70">Wellness Advocate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-section" class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-16 items-start">
+                    <div>
+                        <h2 class="font-serif text-5xl font-bold text-brand-green-dark mb-4">Get In Touch</h2>
+                        <p class="text-lg text-brand-charcoal mb-8 leading-relaxed">Have questions or want to learn more? We'd love to hear from you. Reach out to our team, and we'll get back to you as soon as possible.</p>
+                        <div class="space-y-4 text-brand-charcoal">
+                            <p><i class="fa-solid fa-phone text-brand-green-light w-6"></i> (555) 123-4567</p>
+                            <p><i class="fa-solid fa-envelope text-brand-green-light w-6"></i> hello@exoticus.com</p>
+                            <p><i class="fa-solid fa-map-marker-alt text-brand-green-light w-6"></i> 123 Green Way, Tulsa, OK</p>
+                        </div>
+                    </div>
+                    <div class="bg-brand-off-white p-8 rounded-lg shadow-lg">
+                        <form id="contact-form">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <input type="text" placeholder="First Name" class="w-full p-3 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-green-light">
+                                <input type="text" placeholder="Last Name" class="w-full p-3 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-green-light">
+                            </div>
+                            <div class="mb-6">
+                                <input type="email" placeholder="Email Address" class="w-full p-3 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-green-light">
+                            </div>
+                            <div class="mb-6">
+                                <textarea placeholder="Your Message" rows="5" class="w-full p-3 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-green-light"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-brand-green-dark text-white px-8 py-3 rounded-full font-sans font-bold text-lg hover:bg-brand-charcoal transition-colors duration-300">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="py-24 bg-brand-green-dark text-brand-off-white">
+        <div class="container mx-auto px-6 pt-16 pb-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                     <div class="flex items-center space-x-2 mb-4">
+                        <img src="https://leanlivingjourney.com/wp-content/uploads/2025/11/Exoticus_Indica_Cap-Logo-1.png" width="40px;" height="40px;">
+                        <!-- <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M68.75 87.5C60.4167 87.5 53.0417 84.5417 46.625 78.625C47.2917 76.5 48.25 74.0417 49.5 71.25C52.5 65.5417 55.0833 60.5417 57.25 56.25C59.5 51.875 61.125 48.125 62.125 45C63.2083 41.875 63.75 39.0833 63.75 36.625C63.75 32.5417 62.7083 29.25 60.625 26.75C58.5417 24.25 55.75 23 52.25 23C47.9167 23 44.375 24.5 41.625 27.5C38.875 30.5 37.5 34.2083 37.5 38.625C37.5 41.25 37.8333 43.8333 38.5 46.375C39.1667 48.9167 39.8333 51.125 40.5 53C41.1667 54.875 41.6667 56.4167 42 57.625L28.25 54.375C27.5833 52.125 27.0833 49.7083 26.75 47.125C26.4167 44.5417 26.25 41.75 26.25 38.75C26.25 29.5 28.7917 22.0417 33.875 16.375C39.0417 10.625 46.125 7.75 55.125 7.75C64.6667 7.75 72.1667 10.7917 77.625 16.875C83.0833 22.9583 85.875 30.2917 85.875 38.875C85.875 43.75 84.7917 48.5833 82.625 53.375C80.5417 58.0833 77.75 62.8333 74.25 67.625C70.75 72.4167 67.7917 76.7083 65.375 80.5C64.3333 82.25 63.4583 83.875 62.75 85.375C64.5833 86.375 66.5833 86.9583 68.75 87.125V87.5Z" fill="#B8D434"/>
+                        </svg> -->
+                        <span class="font-serif text-2xl font-bold">Exoticus</span>
+                    </div>
+                    <p class="text-brand-off-white/70 max-w-sm">Cultivating wellness through craftsmanship, nature, and a deep respect for the plant.</p>
+                </div>
+                <div>
+                    <h5 class="font-bold font-sans tracking-wider uppercase mb-4">Quick Links</h5>
+                    <nav class="flex flex-col space-y-2">
+                        <a href="#" class="text-brand-off-white/70 hover:text-brand-green-light transition-colors">Our Story</a>
+                        <a href="#" class="text-brand-off-white/70 hover:text-brand-green-light transition-colors">Our Strains</a>
+                        <a href="#" class="text-brand-off-white/70 hover:text-brand-green-light transition-colors">Where to Buy</a>
+                        <a href="#" class="text-brand-off-white/70 hover:text-brand-green-light transition-colors">Contact</a>
+                    </nav>
+                </div>
+                <div>
+                     <h5 class="font-bold font-sans tracking-wider uppercase mb-4">Follow Us</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-brand-off-white/70 hover:text-brand-green-light transition-colors text-xl"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="text-brand-off-white/70 hover:text-brand-green-light transition-colors text-xl"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="text-brand-off-white/70 hover:text-brand-green-light transition-colors text-xl"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-12 pt-6 text-center text-sm text-brand-off-white/50">
+                <p>&copy; 2025 Exoticus. All Rights Reserved. For use only by adults 21 years of age and older. Keep out of reach of children.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
